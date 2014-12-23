@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>davinci_endoscope</name>
+  <version>0.0.0</version>
+  <description>
+    The davinci_endoscope package, for interfacing with the
+    stereoscopic endoscope on the da Vinci robot.
+  </description>
+
+  <maintainer email="kdh@es.aau.dk">Karl Damkjær Hansen</maintainer>
+
+  <license>GPLv3</license>
+
+  <author email="kdh@es.aau.dk">Karl Damkjær Hansen</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>usb_cam</run_depend>
+  <run_depend>v4l-utils</run_depend>
+</package>

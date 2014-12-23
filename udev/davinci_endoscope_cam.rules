@@ -1,0 +1,11 @@
+# Rules for naming the two endoscope cameras of the Davinci robot.
+#
+# The Terratec Grabby AV grabber does not hasve a serial number, so
+# the video feeds are named according to the usb port they are
+# connected to.
+# 
+# Author Karl D. Hansen <kdh@es.aau.dk>
+
+KERNEL=="video[0-9]*", SUBSYSTEM=="video4linux", ATTR{name}=="em2860*", KERNELS=="3-1", GROUP="video", SYMLINK+="davinci_cam_left"
+
+KERNEL=="video[0-9]*", SUBSYSTEM=="video4linux", ATTR{name}=="em2860*", KERNELS=="5-1", GROUP="video", SYMLINK+="davinci_cam_right"
