@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
-	<node name="set_camera_inputs" pkg="davinci_bringup" type="camera_v4l2_settings.bash" />
+	<node name="set_camera_inputs" pkg="davinci_endoscope" type="camera_v4l2_settings.bash" />
 
 	<node ns="/endoscope" name="left" pkg="usb_cam" type="usb_cam_node">
 		<param name="video_device" value="/dev/davinci_cam_left" />
 		<param name="image_width" value="720" />
 		<param name="image_height" value="576" />
 		<param name="pixel_format" value="yuyv" />
-		<rosparam file="$(find davinci_bringup)/settings/right.yaml"/>
+		<rosparam file="$(find davinci_endoscope)/settings/right.yaml"/>
 	</node>
 
 	<node ns="/endoscope" name="right" pkg="usb_cam" type="usb_cam_node">
@@ -16,7 +16,7 @@
 		<param name="image_width" value="720" />
 		<param name="image_height" value="576" />
 		<param name="pixel_format" value="yuyv" />
-		<rosparam file="$(find davinci_bringup)/settings/right.yaml"/>
+		<rosparam file="$(find davinci_endoscope)/settings/right.yaml"/>
 	</node>
 
 	<node ns="/endoscope" name="both" type="stereo_image_proc" pkg="stereo_image_proc">
